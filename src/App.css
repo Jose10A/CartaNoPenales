@@ -1,0 +1,171 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 90%;
+  max-width: 1200px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logos-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logos-container img {
+  width: 100px; /* Tamaño uniforme para los logos */
+  height: auto;
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title-container h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.main-container {
+  display: flex;
+  gap: 20px;
+}
+
+.image-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carta-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.form-column {
+  flex: 2;
+  padding: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button-row {
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.alert {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.instructions-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.instructions-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.instructions-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.instructions-content button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .logos-container img {
+    width: 80px; /* Tamaño más pequeño para pantallas móviles */
+  }
+
+  .title-container h1 {
+    font-size: 20px; /* Tamaño más pequeño para pantallas móviles */
+  }
+}
