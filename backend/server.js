@@ -198,7 +198,12 @@ app.post('/submit', upload.fields([
   }
 });
 
-// Iniciar el servidor en el puerto 3001
-app.listen(3001, () => {
-  console.log('Servidor backend corriendo en http://localhost:3001');
+// Iniciar el servidor en el puerto asignado por Render o 3001 por defecto
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+  console.log(`Servidor backend corriendo en http://localhost:${port}`);
 });
+// Iniciar el servidor en el puerto 3001
+//app.listen(3001, () => {
+//  console.log('Servidor backend corriendo en http://localhost:3001');
+//});
